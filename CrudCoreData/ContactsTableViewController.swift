@@ -81,8 +81,9 @@ class ContactsTableViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destinationViewController = segue.destinationViewController as! ContactDetailViewController
-        destinationViewController.contact = sender as? Contact
+        if let destinationViewController = segue.destinationViewController as? ContactDetailViewController{
+            destinationViewController.contact = sender as? Contact
+        }
     }
     
     func loadContacts() {

@@ -11,32 +11,37 @@
         <scene sceneID="cFM-KZ-99L">
             <objects>
                 <tableViewController id="Ggz-NC-Tu3" customClass="ContactsTableViewController" customModule="CrudCoreData" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MrC-bL-ejj">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="MrC-bL-ejj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" red="0.52941176470588236" green="0.14509803921568626" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="contactCell" textLabel="qdF-sq-XfD" detailTextLabel="fah-9l-vvu" style="IBUITableViewCellStyleSubtitle" id="ZEt-Gt-2IG">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="contactCell" textLabel="qdF-sq-XfD" detailTextLabel="fah-9l-vvu" imageView="7pv-Fh-fvH" style="IBUITableViewCellStyleSubtitle" id="ZEt-Gt-2IG">
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZEt-Gt-2IG" id="sSc-FT-wPb">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qdF-sq-XfD">
-                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <rect key="frame" x="63" y="6" width="31.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fah-9l-vvu">
-                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <rect key="frame" x="63" y="25.5" width="40.5" height="13.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="user_male_circle" id="7pv-Fh-fvH">
+                                            <rect key="frame" x="15" y="5" width="33" height="33"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -48,6 +53,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Contacts" id="Xdv-Mt-cUv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="XIV-eL-ZyA">
+                            <color key="tintColor" red="0.52941176470588236" green="0.14509803921568626" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="rHm-x2-pev" kind="presentation" id="l4m-8t-AM0"/>
                             </connections>
@@ -69,6 +75,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ECG-xH-Xn0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.73333333333333328" green="0.62745098039215685" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.52941176470588236" green="0.14509803921568626" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="jRl-iC-KMH" kind="relationship" relationship="rootViewController" id="eRu-iG-CjX"/>
@@ -131,11 +141,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="New" id="ZwY-O1-Nsi">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1mP-Fh-QlC">
+                            <color key="tintColor" red="0.52941176470588236" green="0.14509803921568626" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="onCancelTap:" destination="jRl-iC-KMH" id="SgS-U8-2bc"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="pZ4-De-HD8">
+                            <color key="tintColor" red="0.52941176470588236" green="0.14509803921568626" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="onDoneTap:" destination="jRl-iC-KMH" id="OHW-2J-5Ak"/>
                             </connections>
@@ -204,11 +216,13 @@
                     <navigationItem key="navigationItem" title="Details" id="TT5-Kn-fYj">
                         <rightBarButtonItems>
                             <barButtonItem enabled="NO" systemItem="save" id="TdK-tj-vi9">
+                                <color key="tintColor" red="0.52941176470588236" green="0.14509803921568626" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="onSaveTap:" destination="jhA-kV-7CB" id="IZU-3B-2od"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="edit" id="bxh-cO-fHk">
+                                <color key="tintColor" red="0.52941176470588236" green="0.14509803921568626" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="onEditTap:" destination="jhA-kV-7CB" id="XeO-VA-WF4"/>
                                 </connections>
@@ -233,6 +247,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qOi-Fr-bnI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.52941176470588236" green="0.14509803921568626" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.73333333333333328" green="0.62745098039215685" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.52941176470588236" green="0.14509803921568626" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Ggz-NC-Tu3" kind="relationship" relationship="rootViewController" id="gVK-vi-8S8"/>
@@ -243,4 +262,7 @@
             <point key="canvasLocation" x="-204" y="280"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="user_male_circle" width="33" height="33"/>
+    </resources>
 </document>
